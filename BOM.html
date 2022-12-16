@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="openWin()">Open</button>
+        <button onclick="closeWin()">Close</button>
+        <button onclick="alertWin()">Alert</button>
+        <button onclick="promptWin()">Prompt</button>
+        <button onclick="confirmWin()">Confirm</button>
+    </div>
+    <script>
+        var window ;var username;
+        function openWin(){
+            window=window.open("https://portal.accenture.com")
+
+        }
+        function closeWin() {
+            window.close()
+            
+        }
+        function alertWin(){
+            username="Rhutuja";
+            window.alert("Hello,"+username);
+            alert("Thank You")
+        }
+        function promptWin(){
+            var input1=prompt("enter the date :");
+            alert("Enter the date :"+input1)
+        }
+        function confirmWin(){
+            var result=confirm("are you sure to save the credential")
+            if (result==true){
+                alert("Save Successfully")
+            
+            }
+            else{
+                alert("Save Failed")
+            }
+        }
+    </script>
+    
+</body>
+</html>

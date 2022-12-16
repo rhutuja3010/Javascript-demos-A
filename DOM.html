@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="salutation"><br>
+        <button onclick="greeting()">DOM Write</button>
+        <button onclick="Salutation()">DOM By Id</button>
+        <button onclick="course()">DOM By Name</button>
+        <button onclick="tags()">DOM By Tags</button>
+        <hr>
+        <h3>GetElementByName</h3>
+        HTML <input type="radio" name="UI" value="html">
+        CSS  <input type="radio" name="UI" value="css">
+        JS <input type="radio" name="UI" value="js">
+        ReactJS <input type="radio" name="UI" value="ReactJS">
+        <hr>
+    </div>
+    <script>
+        var cources=docume.getElementByName("UI")
+        function greeting(){
+            document.write("DOM Hierarchy Learning model ")
+
+        }
+        function Salutation(){
+            var uname=prompt("enter the username :")
+            var sal=document.getElementById("salutation").value
+            alert(sal +","+uname)
+
+        }
+        function course(){
+
+var courses = document.getElementsByName("UI");
+alert("Total number of courses are :"+
+
+courses.length);
+
+//length property helps you to get the number of courses
+
+for(var i=0;i<courses.length;i++){
+
+    //alert(courses[i].value +",") ;
+
+    var coursesvalues = courses[i].value  + ",";
+
+    alert(coursesvalues);
+
+}
+//alert(courses);
+
+}
+        
+        function tags(){
+            var output=document.getElementsByTagName("UI")
+            output[0].value="No of Cources "+cources.length+"End of tag element"
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+    <div>
+        <h5>Exeption Handling</h5>
+        Enter Username :<input type="text" id="Username"> <br>
+        Enter Password :<input type="text" id="Password"> <br>
+        Enter Confirm Password :<input type="text" id="Confirm Password"> <br>
+        Enter Age :<input type="text" id="Age"> <br>
+        Enter Date Of Joining :<input type="text" id="Date Of Joining"> <br>
+        Enter Steam :<input type="text" id="Stream"> <br>
+        <button onclick="Login">Register</button>
+        <button onclick="Reset" style="margin-right: 1000px;">Reset</button>
+    </div>
+    <script>
+        function pass(){
+            try{
+                var password=document.getElementById("password").value
+                console.log(password)
+                var confirm_password=document.getElementById("confirm_password").value
+                var Age=document.getElementById("Age").value
+                if (password==="@Rhutu@" && confirm_password==="@Rhutu@"){
+                    if (Age>=18 && Age<=24){
+                        alert("Login is Successfully")
+                    }
+
+                }
+            }catch{
+                alert(e.message)
+                
+            }finally{
+                alert("Something is wrong")
+            }
+        }
+        
+
+        
+    </script>
+
+    
+</body>
+</html>
